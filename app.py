@@ -18,7 +18,7 @@ def chat_stream(
     instruction,
     state_chatbot,
 ):
-    if len(context) > 500 or len(instruction) > 150:
+    if len(context) > 5000 or len(instruction) > 1500:
         raise gr.Error("context or prompt is too long!")
     
     bot_summarized_response = ''
@@ -252,7 +252,7 @@ def run(args):
 
     demo.queue(
         concurrency_count=2,
-        max_size=100,
+        max_size=1000,
         api_open=args.api_open
     ).launch(
         max_threads=2,

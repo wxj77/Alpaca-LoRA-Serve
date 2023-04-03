@@ -3,5 +3,5 @@ generation_config:
     top_p: 0.75
     num_beams: 1
     use_cache: True
-    max_length: 1000
+    max_length: 10000
     min_length: 0
